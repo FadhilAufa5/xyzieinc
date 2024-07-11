@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <title>XYZIE ORDER</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top text-2xl text-center p-3 id="mainNav">
+      <div class="container px-4 px-lg-5">
+          <a class="navbar-brand" href="/startbootstrap-grayscale-gh-pages/index.html">X Y Z I E I N C</a>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav ms-auto">
+              </ul>
+          </div>
+      </div>
+  </nav>
+    <div
+      class="max-w-xl w-full mx-auto text-center min-h-screen flex flex-col items-center justify-center"
+    >
+      <h1 class="text-2xl font-bold sm:text-3xl">Order here!</h1>
+      <form
+        action="#"
+        class="mx-auto mb-0 mt-8 max-w-md space-y-4"
+        onsubmit="sendMessageToWhatsapp()"
+      >
+        <input
+          type="text"
+          class="w-full rounded-lg border border-gray-300 p-4 pe-12 text-sm shadow-sm"
+          placeholder="Name"
+          id="nama"
+        />
+        <input
+          type="text"
+          class="w-full rounded-lg border border-gray-200 p-4 pe-12 text-sm shadow-sm"
+          placeholder="Your masssage"
+          id="pesan"
+        />
+        <button
+          type="submit"
+          class="inline-block rounded-lg bg-gray-900 px-5 py-3 text-sm font-medium text-white w-full"
+        >
+          Kirim Pesan
+        </button>
+      </form>
+    </div>
+    <script>
+      function sendMessageToWhatsapp() {
+        const urlToWhatsapp = `https://wa.me/62816742741?text=Halo, nama saya ${nama.value}, ${pesan.value}`;
+
+        window.open(urlToWhatsapp, "_blank");
+      }
+    </script>
+  </body>
+</html>
